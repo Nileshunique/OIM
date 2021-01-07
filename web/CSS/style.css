@@ -1,0 +1,26 @@
+*{margin:0;padding:0;}
+body{background-color: rgb(182, 200, 221);
+font-size: 16px;}
+.Outer{
+    width:90%;margin:auto;
+    background-color: rgb(250, 250, 250);
+}
+.Header{
+    margin:auto; background-color: rgb(37, 36, 36);
+    color: rgb(255, 102, 0);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.HeaderContent{
+    margin:10px; 
+}
+.InstituteLogo{}
+.InstituteName a{font-size: 36px;font-weight: bold;text-decoration: none;color: rgb(255, 102, 0);}
+.InstituteName a:hover{color: rgb(255, 255, 255);}
+.Links a, .Links a:visited{text-decoration: none;margin:2px;font-size: 22px;color: rgb(255, 255, 255);}
+.Links a:after{content: "   |"}
+.Links a:hover{ color:rgb(255, 102, 0);}
+.Container{height:500px;background-color: rgb(255, 102, 0, 0.3);}
+.Footer{font-size: 22px; background-color: rgb(255, 102, 0); color:rgb(255, 255, 255);text-align: center;padding:10px;}
