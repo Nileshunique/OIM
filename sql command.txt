@@ -1,0 +1,90 @@
+Create user authentication table
+CREATE TABLE useraccount (
+`UserName` VARCHAR(10) NOT NULL, 
+`password` VARCHAR(8) NOT NULL, 
+`ID` VARCHAR(10) NOT NULL, 
+`usertype` VARCHAR(10) NOT NULL, 
+`name` VARCHAR(25) NOT NULL, 
+`DOB` DATE NOT NULL, 
+PRIMARY KEY (`UserName`));
+
+Create Student Table
+CREATE TABLE student (
+`STD_Id` VARCHAR(10),
+`StudentName` VARCHAR(25) not null, 
+`FatherName` VARCHAR(25) not null,
+`DOB` date not null, 
+`Gender` VARCHAR(10) NOT NULL,
+`MobileNo` varchar(10) NOT NULL, 
+`EmailID` VARCHAR(40), 
+`DateOfAdmission` DATE NOT NULL, 
+`Adress` VARCHAR(50) NOT NULL, 
+`District` VARCHAR(20) NOT NULL, 
+`states` VARCHAR(20) NOT NULL, 
+`Pincode` int UNSIGNED NOT NULL,
+`Country` varchar(15) not null,
+`Course_Id`varchar(15) not null,
+`Batch_Id` varchar(10) not null,
+PRIMARY KEY (`Id`));
+
+Creating auto increment from 1001 by 1
+ALTER TABLE student AUTO_INCREMENT=1000;
+
+
+creating teacher table
+CREATE TABLE teacher (
+`Tch_Id` VARCHAR(10) not null,
+`TeacherName` VARCHAR(25) not null, 
+`FatherName` VARCHAR(25) not null,
+`DOB` date not null, 
+`Gender` VARCHAR(10) NOT NULL,
+`MobileNo` varchar(10) NOT NULL, 
+`EmailID` VARCHAR(40), 
+`DateOfJoining` DATE NOT NULL, 
+`Adress` VARCHAR(50) NOT NULL, 
+`District` VARCHAR(20) NOT NULL, 
+`states` VARCHAR(20) NOT NULL, 
+`Pincode` int UNSIGNED NOT NULL,
+`Country` varchar(15) not null,
+ PRIMARY KEY (`Tch_Id`));
+
+Creating auto increment from 101 by 1
+ALTER TABLE teacher AUTO_INCREMENT=100;
+
+create table of course
+create table course(
+`Course_Id` varchar(10) not null,
+`CourseName` varchar(40) not null,
+`Duration` varchar(10) not null,
+`Fee` int not null,
+PRIMARY KEY (`Course_Id`));
+
+creating Batch table
+create table batch(
+`Batch_Id` varchar(10) not null,
+`BatchTime` time not null,
+`Tch_Id` varchar(10) not null,
+`Course_Id` varchar(10) not null,
+foreign key(`Tch_Id`) References teacher(`Tch_Id`),
+foreign key(`Course_Id`) References course(`Course_Id`),
+primary key (Batch_Id));
+
+creating table of paidfee
+create table PaidFee(
+`StdId` int unsigned not null,
+`StdName` varchar(25) not null,
+`Amount` int,
+`Balance` int,
+`TeacherId` int unsigned not null,
+`TchName` varchar(25) not null,
+foreign key(`StdId`) references student(`Id`),
+foreign key(`TeacherId`) references teacher(`Id`));
+
+creating Attendance table 
+create table Attendance(
+`StdId` int unsigned not null,
+`Date` date,
+`Status` varchar(2) not null,
+`TeacherId` int unsigned not null,
+foreign key(`StdId`) references student(`Id`));
+
