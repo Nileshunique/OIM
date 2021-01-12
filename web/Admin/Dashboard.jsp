@@ -24,18 +24,8 @@
             </div>
                 <div class="Container">
                     <div id="Content">
-                        <div class="box"><a href="">Add New <br>Staff</a></div>
-                        <div class="box"><a href="">Add New Teacher</a></div>
-                        <div class="box"><a href="">Add New Student</a></div>
-                        <div class="box"><a href="">Add New <br>Course</a></div>
-                        <div class="box"><a href="">Edit Staff <br>Detail</a></div>
-                        <div class="box"><a href="">Edit Teacher Detail</a></div>
-                        <div class="box"><a href="">Edit Student Detail</a></div>
-                        <div class="box"><a href="">Edit Course Detail</a></div>
-                        <div class="box"><a href="">View Pending Fee</a></div>
-                        <div class="box"><a href="">Edit Batch <br>Info</a></div>
-
-                        <%-- <%
+                        
+                        <%
                             int ts=0;
                             int tc=0;
                             int tt=0;
@@ -69,10 +59,30 @@
                                 out.print(e);
                             }
                         %>
-                        <a href="Student_List.jsp"><div id="box1">Total Student<br><% out.print(ts); %></div></a>
-                        <a href="Teacher_List.jsp"><div id="box2">Total Teacher<br><% out.print(tt); %></div></a>
-                        <a href="Batch_List.jsp"><div id="box3">Total Batch<br><% out.print(tb); %></div></a>
-                        <a href="Course_List.jsp"><div id="box4">Total Course<br><% out.print(tc); %></div></a> --%>
+                        <div class="box1">Total Student<br><% out.print(ts); %></div>
+                        <div class="box1">Total Teacher<br><% out.print(tt); %></div>
+                        <div class="box1">Total Running Batch<br><% out.print(tb); %></div>
+                        <div class="box1">Total Course<br><% out.print(tc); %></div>
+                        <div class="box m1"><a href="">Appoint New Staff</a></div>
+                        <div class="box m2"><a href="">Appoint New Teacher</a></div>
+                        <div class="box m3"><a href="">Student Registration</a></div>
+                        <div class="box m4"><a href="">Add New <br>Course</a></div>
+                        <div class="box m5"><a href="">Create Batch</a></div>
+                        <div class="box m1"><a href="">Edit Staff <br>Detail</a></div>
+                        <div class="box m2"><a href="">Edit Teacher Detail</a></div>
+                        <div class="box m3"><a href="">Edit Student Detail</a></div>
+                        <div class="box m4"><a href="">Edit Course Detail</a></div>
+                        <div class="box m5"><a href="">Edit Batch</a></div>
+                        <div class="box m1"><a href="">View Staff List</a></div>
+                        <div class="box m2"><a href="">View Teacher List</a></div>
+                        <div class="box m3"><a href="">View Student List</a></div>
+                        <div class="box m4"><a href="">View All <br>Courses</a></div>
+                        <div class="box m5"><a href="">View Runing Batches</a></div>
+                        <div class="box m1"><a href="">Create Username & Password for Staff</a></div>
+                        <div class="box m2"><a href="">Create Username & Password for Teacher</a></div>
+                        <div class="box m3"><a href="">Create Username & Password for Student</a></div>
+                        <div class="box m3"><a href="">View Student Attendance</a></div>
+                        <div class="box m6"><a href="">View Pending Fee</a></div>
                     </div>
                 </div>
             <div class="Footer">Project Created by Nilesh Kumar & Nitin</div>
