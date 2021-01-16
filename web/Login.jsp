@@ -41,8 +41,8 @@ and open the template in the editor.
                                                 <option Value="Student">Student</option>                                        
                                             </select>
                                         </td></tr>
-                                        <tr><td>UserName</td><td><input type="text" name="user" placeholder="--USERNAME--" style="width:250px;height:20px;"></td></tr>
-                                        <tr><td>Password</td><td><input type="password" name="pass" placeholder="--PASSWORD--" style="width:250px;height:20px;"></td></tr>
+                                        <tr><td>UserName</td><td><input type="text" name="user" value="Nilesh1" placeholder="--USERNAME--" style="width:250px;height:20px;"></td></tr>
+                                        <tr><td>Password</td><td><input type="password" name="pass" value="nilesh1" placeholder="--PASSWORD--" style="width:250px;height:20px;"></td></tr>
                                         <tr><td>Captcha</td><td><img src="Image/Frame1.jpg" alt="Captcha" style="width:250px;height:100px;"></td></tr>
                                         <tr><td>Enter The Captcha</td><td><input type="text" name="Captcha" placeholder="--Captcha--" style="width:250px;height:20px;"></td></tr>
                                         <tr><td><button class="login" type="submit">Submit</button></td><td><button class="login" type="reset">Reset</button></td></tr>

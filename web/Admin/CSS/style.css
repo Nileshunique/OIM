@@ -5,22 +5,25 @@ font-size: 16px;}
     width:90%;margin:auto;
     background-color: rgb(250, 250, 250);
 }
-.Header{
-    margin:auto; background-color: rgb(37, 36, 36);
-    color: rgb(255, 102, 0);
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.HeaderContent{
-    margin:10px; 
-}
+.Header{margin:auto; background-color: rgb(37, 36, 36);color: rgb(255, 102, 0);display:flex;flex-flow: row wrap;align-items: center;justify-content: space-between;}
+.HeaderContent{margin:10px;}
 .InstituteLogo{}
 .InstituteName a{font-size: 36px;font-weight: bold;text-decoration: none;color: rgb(255, 102, 0);}
 .InstituteName a:hover{color: rgb(255, 255, 255);}
 .Links a, .Links a:visited{text-decoration: none;margin:2px;font-size: 22px;color: rgb(255, 255, 255);}
-.Links a:after{content: "   |"}
 .Links a:hover{ color:rgb(255, 102, 0);}
+.nav{margin:5px 0px;font-size: 28px; display: flex;flex-flow: row wrap;justify-content: center;justify-content: space-between;background-color: aqua;}
+.nav_Items{margin:10px;text-decoration: none;color:black;position: relative;}
+.nav_Items:hover{color:white;background-color: rgb(255, 102, 0);}
 .Container{height:500px;background-color: rgb(255, 102, 0, 0.3);}
 .Footer{font-size: 22px; background-color: rgb(255, 102, 0); color:rgb(255, 255, 255);text-align: center;padding:10px;}
+.Staff_Nav, .Teacher_Nav, .Student_Nav, .Course_Nav, .Batch_Nav, .Fee_Nav, .Attendance_Nav{position: absolute;margin-left:-10px;width:200px;font-size: 18px;background: rgb(0, 238, 255);
+    display: none;
+}
+.Nav_Item{margin:10px 20px;}
+/* .Nav_Item:after{content:"--------------------";} */
+.Nav_Item a{text-decoration: none;color:black;}
+.Staff_Nav:hover, .Teacher_Nav:hover, .Student_Nav:hover, .Course_Nav:hover, .Batch_Nav:hover, .Fee_Nav:hover, .Attendance_Nav:hover{display: block;}
+.Staff:hover > .Staff_Nav, .Teacher:hover > .Teacher_Nav, .Student:hover > .Student_Nav, .Course:hover > .Course_Nav, .Batch:hover > .Batch_Nav, .Fee:hover > .Fee_Nav, .Attendance:hover > .Attendance_Nav{display: block;}
+Attendance
+Fee
