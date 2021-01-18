@@ -20,10 +20,9 @@ and open the template in the editor.
                 <div class="HeaderContent InstituteName"><a href=http://localhost:8080/OIM/index.html>Onilne Institute Management</a></div>
                 <div class="HeaderContent Links">
                     <a href="index.html">Home</a>
-                    <a href="Login.html">Login</a>
+                    <a href="Course.html">Courses</a>
                     <a href="AboutUs.html">About Us</a>
                     <a href="ContactUs.html">Contact Us</a>
-                    <a href="Course.html">Courses</a>
                 </div>
             </div>
                 <div class="Container">

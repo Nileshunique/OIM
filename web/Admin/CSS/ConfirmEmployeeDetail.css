@@ -1,0 +1,9 @@
+#form{padding-top:130px;}
+button {border: solid #4CAF50;padding: 10px 35px;text-align: center;text-decoration: none;
+        display: inline-block;font-size: 16px;margin: 4px 2px;transition-duration: 1s;cursor: pointer;}
+button:hover {background-color: #4CAF50;color: white;}
+h1,h2{text-align: center;padding-top: 30px;}
+#show_Detail{padding-top:40px; margin:0px auto;width:900px;}
+#show_Detail table{text-align: center;}
+#show_Detail table tr th{border-width:  2px 2px 0px;border-style: solid;font-size: 25px;}
+#show_Detail table tr td{border-width:  0px 2px 2px;border-style: solid;font-size: 20px;}
