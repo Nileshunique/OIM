@@ -7,7 +7,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/ConfirmEmployeeDetail.css">
+        <link rel="stylesheet" href="CSS/ConfirmStaffDetail.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
     <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");
@@ -57,18 +58,19 @@
                             </tr><tr></tr><tr></tr><tr></tr>
                             <tr><th colspan="4">Address</th></tr>
                             <tr><td colspan="4"><% out.print(Add+" "+Dist+" "+State+" "+pincode); %></td></tr>
-                            <%-- <% 
-                                if(staffCatagery = "Accademics"){
-                                    out.print(<tr>
-                                        <th colspan="2"> Programmes</th> <th colspan="2">Experience </th></tr>
-                                    <tr>
-                                        <td colspan="2"><% out.print(Programme); %></td><td colspan="2"><% out.print(Experience); %></td>
-                                    </tr>);
-                                }
-                            %> --%>
+                            <% 
+                                if(staffCatagery.equals("Accademics")){ 
+                            %>
+                            <tr>
+                                <th colspan="2"> Programmes</th> <th colspan="2">Experience </th></tr>
+                            <tr>
+                                <td colspan="2"><% out.print(Programme); %></td><td colspan="2"><% out.print(Experience); %></td>
+                            </tr>
+                            <% } %>
                             
                         </table>
-                        <form method="post" action="Update_Teacher.jsp">
+                        <form method="post" action="UpdateStaff.jsp">
+                            <input type="hidden" name="staffCatagery" value="<% out.print(staffCatagery); %>">
                             <input type="hidden" name="Ename" value="<% out.print(Ename); %>">
                             <input type="hidden" name="fname" value="<% out.print(fname); %>">
                             <input type="hidden" name="dob" value="<% out.print(DOB); %>">
@@ -81,13 +83,19 @@
                             <input type="hidden" name="State" value="<% out.print(State); %>">
                             <input type="hidden" name="pincode" value="<% out.print(pincode); %>">
                             <input type="hidden" name="Qualification" value="<% out.print(Qualification); %>">
-                            <button type="submit">Confirm The Above Data</button>
+                            <input type="hidden" name="Programme" value="<% out.print(Programme); %>">
+                            <input type="hidden" name="Experience" value="<% out.print(Experience); %>">
+                            <button type="submit">Confirm The Above Data</button><button type="button" onclick="EditStaffDetail()">Edit The Above Data</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="Footer">Project Created by Nilesh Kumar & Nitin</div>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script type="text/javascript">
+                function EditStaffDetail() {
+                    window.history.go(-1);
+                }
+            </script>
         </div>
     </body>
 </html>

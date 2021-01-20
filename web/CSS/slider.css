@@ -1,7 +1,7 @@
 /* html{ --sliderWidth: 1000px; --sliderheight:600px; } */
 /* .slider{width:var(--sliderWidth); height: var(--sliderheight); border: 1px solid red; display: none;}
 .slidingImageSize{width: var(--sliderWidth); height: var(--sliderheight);} */
-.Slider{ display: none;}
+/* .Slider{ display: none;} */
 .slidingImageSize{width: 100%; height: 500px;}
 .Content{position:relative;}
 /* .previous{left:1%;}

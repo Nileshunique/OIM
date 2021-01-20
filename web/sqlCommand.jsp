@@ -40,7 +40,7 @@
                 
                 //String CreateTeacher = "CREATE TABLE teacher (`Tch_Id` VARCHAR(10) not null,`TeacherName` VARCHAR(25) not null,`FatherName` VARCHAR(25) not null,`DOB` date not null,`Gender` VARCHAR(10) NOT NULL,`MobileNo` varchar(10) NOT NULL,`EmailID` VARCHAR(40),`DateOfJoining` DATE NOT NULL,`Adress` VARCHAR(50) NOT NULL,`District` VARCHAR(20) NOT NULL,`states` VARCHAR(20) NOT NULL,`Pincode` int UNSIGNED NOT NULL,PRIMARY KEY (`Tch_Id`))";
                 //stmt.executeUpdate(CreateTeacher);
-                //String CreateBatch = "create table batch(`Batch_Id` varchar(10) not null,`BatchTime` time not null,`Tch_Id` varchar(10) not null,`Course_Id` varchar(10) not null,foreign key(`Tch_Id`) References teacher(`Tch_Id`),foreign key(`Course_Id`) References course(`Course_Id`),primary key (Batch_Id));";
+                //String CreateBatch = "create table batch(`Batch_Id` varchar(10) not null, `BatchName` varchar(25) not null, `BatchTime` varchar(20) not null,`Tch_Id` varchar(10) not null,`Course_Id` varchar(10) not null, foreign key(`Tch_Id`) References teacher(`Tch_Id`),foreign key(`Course_Id`) References course(`Course_Id`));";
                 //stmt.executeUpdate(CreateBatch);
                 //String InsertIntoStudent4 = "";
                 //stmt.executeUpdate(InsertIntoStudent4);

@@ -58,12 +58,13 @@
                         <div class="Batch_module">
                             <a href="CreateBatch.jsp">Create Batch</a> 
                             <a href="">Edit Batch</a> 
-                            <a href="">View Runing Batches</a>
+                            <a href="ViewRunningBatch.jsp">View Runing Batches</a>
                         </div>
                     </div>
                     <div href="" class="module_Items">
                         <p>Fees  Management</p>
                         <div class="Fee_module">
+                            <a href="">Pay Fees</a>
                             <a href="">View Pending Fee List</a>
                         </div>
                     </div>

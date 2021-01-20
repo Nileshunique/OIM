@@ -1,9 +1,3 @@
-<%-- 
-    Document   : AddNewStaff
-    Created on : 12 Jan, 2021, 11:27:41 PM
-    Author     : Nilesh
---%>
-
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,8 +6,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>OIM Teacher Registration</title>
         <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/AddNewStaff.css">      
-        <%-- <script type="text/javascript" src="JavaScript/sidebarnav.js"></script> --%>
+        <link rel="stylesheet" href="CSS/AddNewStaff.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
     </head>
     <body>
         <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");%>
@@ -29,7 +24,7 @@
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">
                 <div id="Content">
-                    <form action="ConfirmEmployeeDetail.jsp" method="post" >
+                    <form action="ConfirmStaffDetail.jsp" method="post" >
                         <div id="staffCatagery"><span>Employee Type</span>
                             <span><input type="radio" name="staffCatagery" value="Accademics" class="staffCatagery">Academics</span>
                             <span><input type="radio" name="staffCatagery" value="NonAccademics" class="staffCatagery"  checked="checked">Non Academics</span>
@@ -53,7 +48,7 @@
                                         </select></td>
                                 
                                     <td>Date Of Birth</td>
-                                    <td><input type="date" name="dob"  style="width:200px;height:20px;"></td>
+                                    <td><input type="date" name="dob"  style="width:200px;height:20px;" max="2000-12-31"></td>
                                 </tr>
                                 <tr>
                                     <td>Email ID</td>
@@ -64,7 +59,7 @@
                                 </tr>
                                 <tr>
                                     <td>Date Of Joining</td>
-                                    <td><input type="date" name="Join_date" style="width:200px;height:20px;"></td>
+                                    <td><input type="date" name="Join_date" style="width:200px;height:20px;" min="2021-01-01"></td>
                                 
                                     <td>Address</td>
                                     <td><input type="text" name="Add" placeholder="Addres"  style="width:200px;height:20px;"></td>
@@ -107,14 +102,13 @@
                                 </tr>
                             </table>
                             <table class="NonAccademics">
-                                <tr><td style="padding-top:80px;"></td><td><button type="submit">Submit</button></td><td><button type="reset">Reset</button></td></tr>
+                                <tr><td style="padding-top:80px;"></td><td><input type="submit" value="submit" id="submitbtn"></td><td><input type="reset" value="Reset"></td></tr>
                             </table>
                         </fieldset>
                     </form>
                 </div>
              </div>
             <div class="Footer">Project Created by Nilesh Kumar & Nitin</div>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
             <script src="JS/AddNewStaff.js"></script>
         </div>
     </body>

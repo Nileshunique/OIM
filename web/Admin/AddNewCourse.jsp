@@ -33,7 +33,7 @@
                                 <tr><td>Course Name</td><td><input type="text" name="cname" placeholder="Course name"></td></tr>
                                 <tr><td>Duration</td><td><input type="text" name="cdur" placeholder="Course Duration"></td></tr>
                                 <tr><td>Course Fee</td><td><input type="text" name="cfee" placeholder="Course Fee"></td></tr>
-                                <tr><td><button type="submit">Submit</button></td><td><button type="reset">Reset</button></td></tr>
+                                <tr><td><input type="submit" value="Submit"></td><td><input type="reset" value="Reset"></td></tr>
                             </table>
                         </fieldset>
                     </form>

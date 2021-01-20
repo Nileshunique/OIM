@@ -10,6 +10,6 @@ body{background-color: rgb(182, 200, 221);font-size: 16px;}
 .Links a:hover{ color:rgb(255, 102, 0);}
 .Container{background-color: rgb(255, 102, 0, 0.3);padding-bottom: 20px;}
 .Footer{font-size: 22px; background-color: rgb(255, 102, 0); color:rgb(255, 255, 255);font-weight: bold; text-align: center;padding:10px;}
-button {border: solid #4CAF50;padding: 10px 35px;text-align: center;text-decoration: none;
+input[type=submit], input[type=reset] {border: solid #4CAF50;padding: 10px 35px;text-align: center;text-decoration: none;
     display: inline-block;font-size: 16px;margin: 4px 2px;transition-duration: 1s;cursor: pointer;}
-button:hover {background-color: #4CAF50;color: white;}
+input[type=submit]:hover, input[type=reset]:hover {background-color: #4CAF50;color: white;}
