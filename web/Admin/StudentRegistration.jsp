@@ -7,7 +7,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/ConfirmEmployeeDetail.css">
+        <link rel="stylesheet" href="CSS/AddNewStaff.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
     <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");
@@ -24,30 +25,12 @@
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">
                 <div id="Content">
-                <%
-                int r=0;
-                try{
-                    Class.forName("com.mysql.jdbc.Driver");
-                    Connection mycon =DriverManager.getConnection("jdbc:mysql://localhost:3306/ims","root","nilesh");
-                    String sql1="select max(Id) from student;";
-                    Statement Stmt1=mycon.createStatement();
-                    ResultSet res1 = Stmt1.executeQuery(sql1);
-                    while(res1.next()){
-                        r=res1.getInt(1);
-                    }
-                    r=r+1; 
-                    out.print("<h1>Your Registration ID is "+r+".</h1>");
-                }
-                catch(Exception e){
-                    out.print(e);
-                }
-                %>
-                <form action="Confirm_Student_Detail.jsp" method="post" >
+                <form action="ConfirmStudent.jsp" method="post" >
                 <fieldset>
                     <legend>Student Registration</legend>
                     <table>
                         <tr>
-                            <td>Student Name</td><input type="hidden" name="sid" value="<% out.print(r); %>">
+                            <td>Student Name</td>
                             <td><input type="text" name="sname" placeholder="Student name" style="width:200px;height:20px;"></td>
 
                             <td>Father Name</td>
@@ -77,35 +60,32 @@
                             <td>
                                 <input type="date" name="Add_date" style="width:200px;height:20px;"></td>
 
-                            <td>Batch</td>
                             <% 
                             try
                             {
                                 Class.forName("com.mysql.jdbc.Driver");
                                 Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
-                                String sql="SELECT CourseName FROM course";
-                                String sql1="Select BatchTime From batch";
+                                String sql="SELECT Course_Id, CourseName, fee FROM course";
                                 Statement stmt=myCon.createStatement();
-                                Statement stmt1=myCon.createStatement();
                                 ResultSet res=stmt.executeQuery(sql);
-                                ResultSet res1=stmt1.executeQuery(sql1);
                             %>
-                            <td>
-                                <select name="batch" style="width:205px;height:30px;" required="">
-                                    <option>Select Batch Time</option><% while(res1.next()){ %>
-                                    <option value="<%out.print(res1.getString(1));%>"><%out.print(res1.getString(1)+" ");%> o'clock to 1 Hour</option><% } %>
+                            <script type="text/javascript">
+                                var CourseList= {<% int i=0; while(res.next()){ out.print(i+":['"+res.getString(1) + "','" +res.getString(2) + "'," +res.getInt(3)+"],"); i++;} out.print(i+":"+i); %>};
+                            </script>
+                            <td>Course</td>
+                            <td><select name="course" id="course" style="width:205px;height:30px;" required="">
                                 </select>
+                                <input type="hidden" name="courseName" id="courseName">
                             </td>
                         </tr>
                         <tr>
-                            <td>Course</td>
-                            <td><select name="course" style="width:205px;height:30px;" required="">
-                                    <option>Select Course</option><% while(res.next()){ %>
-                                    <option value="<%out.print(res.getString(1));%>"><%out.print(res.getString(1));%></option><% } %>
-                                </select>
+                            <td>Fee</td>
+                            <td>
+                                <input type="text" style="width:200px;height:25px;" class="CourseFee" disabled>
+                                <input type="hidden" name="Fee" class="CourseFee">
+                            </td>
                                 <% }
                         catch(Exception e){out.print(e);}%>
-                            </td>
                             <td>Address</td>
                             <td><input type="text" name="Add" placeholder="Addres"  style="width:200px;height:20px;"></td>
                         </tr>
@@ -122,14 +102,14 @@
                             <td>Country</td>
                             <td><input type="text" name="country" placeholder="Country" style="width:200px;height:20px;"></td>
                         </tr>
-                        <tr><td style="padding-top:80px;"></td><td><button type="submit">Submit</button></td><td><button type="reset">Reset</button></td></tr>
+                        <tr><td style="padding-top:80px;"></td><td><input type="submit" value="Submit" id="submitbtn"></td><td><input type="reset" value="Reset"></td></tr>
                     </table>
                     </fieldset>
                 </form>
             </div>
             </div>
+            <script src="JS/StudentRegistration.js"></script>
             <div class="Footer">Project Created by Nilesh Kumar & Nitin</div>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         </div>
     </body>
 </html>
