@@ -26,6 +26,7 @@
             <div class="Container">
                 <div id="Content">
                 <form action="ConfirmStudent.jsp" method="post" >
+                <input type="hidden" name="StdId" id="StdId">
                 <fieldset>
                     <legend>Student Registration</legend>
                     <table>

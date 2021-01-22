@@ -1,0 +1,4 @@
+#show_Detail{padding-top:40px; margin:0px auto;width:1000px;}
+#show_Detail table{text-align: center;}
+#show_Detail table tr th{border-width:  2px 2px 0px;border-style: solid;font-size: 25px;}
+#show_Detail table tr td{border-width:  0px 2px 2px;border-style: solid;font-size: 20px;}

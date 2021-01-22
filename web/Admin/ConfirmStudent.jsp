@@ -26,6 +26,7 @@
             <div class="Container">
                 <div id="Content">
                     <% 
+                        String StdId=request.getParameter("StdId");
                         String sname=request.getParameter("sname");
                         String fname=request.getParameter("fname");
                         String DOB=request.getParameter("dob");
@@ -65,7 +66,8 @@
                             </tr>
                             
                         </table>
-                        <form method="post" action="UpdateStaff.jsp">
+                        <form method="post" action="StoreStudent.jsp">
+                            <input type="hidden" name="StdId" value="<% out.print(StdId); %>">
                             <input type="hidden" name="sname" value="<% out.print(sname); %>">
                             <input type="hidden" name="fname" value="<% out.print(fname); %>">
                             <input type="hidden" name="dob" value="<% out.print(DOB); %>">

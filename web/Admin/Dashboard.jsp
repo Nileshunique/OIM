@@ -64,8 +64,8 @@
                     <div href="" class="module_Items">
                         <p>Fees  Management</p>
                         <div class="Fee_module">
-                            <a href="">Pay Fees</a>
-                            <a href="">View Pending Fee List</a>
+                            <a href="PayFee.jsp">Pay Fees</a>
+                            <a href="ViewPendingFee.jsp">View Pending Fee List</a>
                         </div>
                     </div>
                     <div href="" class="module_Items Attendance">

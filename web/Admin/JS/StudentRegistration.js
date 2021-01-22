@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    var date = new Date();
+    var H = date.getHours();
+    var M = date.getMinutes();
+    var m = date.getMonth();
+    var y = date.getYear();
+    StdID = "STD"+y+""+H+""+m+""+M;
+    $("#StdId").val(StdID);
     var objLength = Object.keys(CourseList).length - 2;
     courseLists = "<option></option>";
     for(i=0;i<=objLength;i++){

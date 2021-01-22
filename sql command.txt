@@ -92,5 +92,5 @@ foreign key(`StdId`) references student(`Id`));
 
 
 create table FeeReceipt(`Receipt_Id` int UNSIGNED not null,`STD_Id` int unsigned not null,`PaidAmount` int UNSIGNED not null,`Date` date not null;`Staff_Id` vatchar(10) not null,foreign key(`StdId`) references student(`STD_Id`),foreign key(`Staff_Id`) references staff(`Staff_Id`),PRIMARY KEY (`Receipt_Id`));
-
+ALTER TABLE feereceipt AUTO_INCREMENT=1000;
 

@@ -29,6 +29,7 @@
                             <span><input type="radio" name="staffCatagery" value="Accademics" class="staffCatagery">Academics</span>
                             <span><input type="radio" name="staffCatagery" value="NonAccademics" class="staffCatagery"  checked="checked">Non Academics</span>
                         </div>
+                        <input type="hidden" name="StaffId" id="StaffId">
                         <fieldset>
                             <legend>Employee Registration Form</legend>
                             <table class="NonAccademics">
