@@ -25,7 +25,22 @@
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">
                 <div id="Content">
-                    <form method="post" action="">
+                    <%
+                        try{
+                            Class.forName("com.mysql.jdbc.Driver");
+                            Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
+                            String sql = "select Course_Id, CourseName from course";
+                            Statement stmt=myCon.createStatement();
+                            ResultSet res=stmt.executeQuery(sql);
+                            %>
+                            <script type="text/javascript">
+                                var CourseList = {<% int i=0; while(res.next()){ out.print(i+":['"+res.getString(1) + "','" +res.getString(2) +"'],"); i++;} out.print(i+":"+i); %>};
+                            </script>
+                            <%
+                        }
+                        catch(Exception e){out.print(e);}
+                    %>
+                    <form method="post" action="StoreCourse.jsp">
                         <fieldset>
                             <legend>Add New Course</legend>
                             <table>
@@ -38,28 +53,6 @@
                         </fieldset>
                     </form>
                     <div class="responds"></div>
-                    <%
-                        String cid="null";
-                        String cname="null";
-                        String cdur="null";
-                        String cfee="null";
-                        cid = request.getParameter("cid");
-                        cname = request.getParameter("cname");
-                        cdur = request.getParameter("cdur");
-                        cfee = request.getParameter("cfee");
-                        try{
-                            Class.forName("com.mysql.jdbc.Driver");
-                            Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
-                            if(cfee!=null){
-                                int fee=Integer.parseInt(cfee);
-                                String Insertsql="INSERT INTO course (`Course_Id`, `CourseName`, `Duration`, `Fee`) VALUES ('"+cid+"', '"+cname+"', '"+cdur+"', '"+fee+"')";
-                                PreparedStatement myStmt=myCon.prepareStatement(Insertsql);
-                                myStmt.executeUpdate();
-                                out.print("<h1>Course is Updated into Database</h1>");
-                            }
-                        }
-                        catch(Exception e){out.print(e);}
-                    %>
                 </div>
                 <script src="JS/AddNewCourse.js"></script>
             </div>

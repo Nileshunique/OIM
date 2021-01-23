@@ -27,7 +27,7 @@
                 <div id="Content">
                     <div id="show_Detail">
                     <% 
-                        String StaffID=request.getParameter("StaffId");
+                        String StaffID=request.getParameter("StaffID");
                         String staffCatagery=request.getParameter("staffCatagery");
                         String Ename=request.getParameter("Ename");
                         String fname=request.getParameter("fname");
