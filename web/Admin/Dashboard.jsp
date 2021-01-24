@@ -28,7 +28,7 @@
             <div class="Container">
                 <div id="Content">
                     <div href="" class="module_Items">
-                        <p>Staff / Teacher Management</p>
+                        <p>Staff / Teacher </p>
                         <div class="Staff_module">
                             <a href="AddNewStaff.jsp">Appoint New Staff / Teacher</a> 
                             <a href="">Edit Staff / Teacher Detail</a> 
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Student  Management</p>
+                        <p>Student  </p>
                         <div class="Student_module">
                             <a href="StudentRegistration.jsp">Student Registration</a> 
                             <a href="">Edit Student Detail</a> 
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Course  Management</p>
+                        <p>Course  </p>
                         <div class="Course_module">
                             <a href="AddNewCourse.jsp">Add New Course</a> 
                             <a href="">Edit Course Detail</a> 
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Batch  Management</p>
+                        <p>Batch  </p>
                         <div class="Batch_module">
                             <a href="CreateBatch.jsp">Create Batch</a> 
                             <a href="">Edit Batch</a> 
@@ -62,14 +62,14 @@
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Fees  Management</p>
+                        <p>Fees  </p>
                         <div class="Fee_module">
                             <a href="PayFee.jsp">Pay Fees</a>
                             <a href="ViewPendingFee.jsp">View Pending Fee List</a>
                         </div>
                     </div>
                     <div href="" class="module_Items Attendance">
-                        <p>Attendance  Management</p>
+                        <p>Attendance  </p>
                         <div class="Attendance_module">
                             <a href="">View Student Attendance</a>
                         </div>

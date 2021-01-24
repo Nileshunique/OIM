@@ -7,6 +7,7 @@ var date = new Date();
     var m = date.getMonth();
     var y = date.getYear();
     staffID = y+""+H+""+m+""+M;
+    console.log(staffID);
     $("#StaffId").val("STF"+staffID);
     $('.staffCatagery').on('change',function(){
         myVal = $(this).attr("value");
