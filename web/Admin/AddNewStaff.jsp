@@ -29,6 +29,7 @@
                             <span><input type="radio" name="staffCatagery" value="Accademics" class="staffCatagery">Academics</span>
                             <span><input type="radio" name="staffCatagery" value="NonAccademics" class="staffCatagery"  checked="checked">Non Academics</span>
                         </div>
+                        <input type="hidden" name="update" value="Store">
                         <input type="hidden" name="StaffId" id="StaffId">
                         <fieldset>
                             <legend>Employee Registration Form</legend>
@@ -91,13 +92,26 @@
                             <table class="Accademics">
                                 <tr>    
                                     <td style="height:50px;">Teacher's Programmes</td>
-                                    <td><select id="Programme"  style="width:250px;height:25px;" name="Programme">
+                                    <td>
+                                        <select id="Programme"  style="width:250px;height:25px;" name="Programme">
                                             <option value=""></option>
-                                            <option value="Diploma Course">Diploma Courses(4-5 Experience Require)</option>
-                                            <option value="Certificate Coures">Certificate Coures(1-2 Experience Require)</option>
-                                            <option value="Advanced Designing">Advanced Designing(5-6 Experience Require)</option>
-                                            <option value="Advanced Programming">Advanced Programming(above 5 Experience Require)</option>
-                                        </select></td>
+                                        <%
+                                            try{ 
+                                                Class.forName("com.mysql.jdbc.Driver");
+                                                Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
+                                                String sqlC="select Course_Id, CourseName from course";
+                                                //out.print("<p>"+sql+"</p>");
+                                                Statement stmt=myCon.createStatement();
+                                                ResultSet resC=stmt.executeQuery(sqlC);
+                                                while(resC.next()){
+                                                    out.print("<option value="+resC.getString(1)+">"+resC.getString(2)+"</option>");
+                                                }
+                                                
+                                            }
+                                            catch(Exception e){out.println(e);}
+                                        %>
+                                        </select>
+                                    </td>
                                         <td>Teachers Experience</td>
                                         <td><input type="number" id="Experience" name="Experience" placeholder="Experience in Years" style="width:200px;height:20px;"></td>
                                 </tr>

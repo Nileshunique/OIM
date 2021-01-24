@@ -31,7 +31,7 @@
                         <p>Staff / Teacher </p>
                         <div class="Staff_module">
                             <a href="AddNewStaff.jsp">Appoint New Staff / Teacher</a> 
-                            <a href="">Edit Staff / Teacher Detail</a> 
+                            <a href="EditStaffList.jsp">Edit Staff / Teacher Detail</a> 
                             <a href="ViewStaffList.jsp">View Staff / Teacher List</a> 
                             <a href="">Create Username & Password for Staff / Teacher</a>
                         </div>
@@ -40,8 +40,8 @@
                         <p>Student  </p>
                         <div class="Student_module">
                             <a href="StudentRegistration.jsp">Student Registration</a> 
-                            <a href="">Edit Student Detail</a> 
-                            <a href="">View Student List</a> 
+                            <a href="EditStudentList.jsp">Edit Student Detail</a> 
+                            <a href="ViewStudentList.jsp">View Student List</a> 
                             <a href="">Create Username & Password for Student</a>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                         <div class="Course_module">
                             <a href="AddNewCourse.jsp">Add New Course</a> 
                             <a href="">Edit Course Detail</a> 
-                            <a href="">View All Courses</a>
+                            <a href="ViewCourseList.jsp">View All Courses</a>
                         </div>
                     </div>
                     <div href="" class="module_Items">

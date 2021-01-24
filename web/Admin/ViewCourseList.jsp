@@ -25,40 +25,31 @@
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">
                 <div id="Content">
-
+                    <div id="show_Detail">
+                    <h1>List Of Courses</h1>
+                        <table> 
+                            <tr><th width="100px">Course ID</th><th width="300px">Course Name</th><th width="150px">Course Duration</th><th width="50px">Fee</th>
+                            </tr>
                     <% 
                         try{ 
                             Class.forName("com.mysql.jdbc.Driver");
                             Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
-                            String sqlC="select Course_Id, CourseName from course";
+                            String sqlC="select * from course";
                             Statement stmtC=myCon.createStatement();
                             ResultSet resC=stmtC.executeQuery(sqlC);
-                            Statement StmtB=myCon.createStatement();
-                            String sqlB = "select * from batch";
-                            ResultSet resB = StmtB.executeQuery(sqlB);
-                    %>
-                        <script type="text/javascript">
-                            var BatchList = { <% int i=0; while(resB.next()){out.print(i+":['"+resB.getString(1)+"','"+resB.getString(2)+"','"+resB.getString(3)+"','"+resB.getString(4)+"','"+resB.getString(5)+"','"+resB.getString(6)+"'],"); i++;} out.print(i+":"+i); %>};
-                                
-                            var CourseList = { <% i=0; while(resC.next()){out.print(i+":['"+resC.getString(1)+"','"+resC.getString(2)+"'],"); i++;} out.print(i+":"+i); %>};
-                        </script>
-                    <%
-                        
+                            while(resC.next()){
+                                out.print("<tr><td>"+resC.getString(1)+"</td><td>"+resC.getString(2)+"</td><td>"+resC.getString(3)+"</td><td>"+resC.getInt(4)+"</td></tr>");
+                            }
                         }
                         catch(Exception e){out.println(e);}
                     %>
                     
-                    <div id="show_Detail">
-                    <h1>List Of Running Batches</h1>
-                        <table id="list"> 
-                            <tr><th width="120px">Batch Name</th><th width="230px">Course Name</th><th width="250px">Batch Day</th><th width="150px">Time</th>
-                            </tr>
+
                         </table>
                     </div>
                 </div>
             </div>
             <div class="Footer">Project Created by Nilesh Kumar & Nitin</div>
-            <script src="JS/ViewRunningBatch.js"></script>
         </div>
     </body>
 </html>

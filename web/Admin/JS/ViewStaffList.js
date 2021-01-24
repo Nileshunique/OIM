@@ -45,22 +45,3 @@ $(document).ready(function(){
         }
     });
 });
-// <div id="show_Detail">
-//     <table>
-//     <%
-//         while(res.next()){ %>
-//             <tr><th style='width:120px;'>Employee ID</th><th style='width:200px;'>Employee Name</th><th style='width:200px;'>Father Name</th>
-//                 <th style='width:130px;'>Date Of Birth</th><th style='width:100px;'>Gender</th><th style='width:130px;'>Mobile No</th><th style='width:250px;'>Email Id</th>
-//             </tr><tr>
-//                 <td><% out.print(res.getString(1)); %></td><td><% out.print(res.getString(2)); %></td><td><% out.print(res.getString(3)); %></td><td><% out.print(res.getString(4)); %></td>
-//                 <td><% out.print(res.getString(5)); %></td><td><% out.print(res.getString(6)); %></td><td><% out.print(res.getString(7)); %></td>
-//             </tr>
-//             <tr><th>Date of joining</th><th>Experience</th><th>Programme</th><th>Qualification</th><th colspan='3'>Address</th></tr>
-//             <tr>
-//                 <td><% out.print(res.getString(8)); %></td><td><% out.print(res.getString(15)+" Years"); %></td><td><% out.print(res.getString(14)); %></td><td><% out.print(res.getString(13)); %></td>
-//                 <td colspan='3'><% out.print(res.getString(9)+", "+res.getString(10)+", "+res.getString(11)+" - "+res.getString(12)); %></td>
-//             </tr>
-//             <tr style='height:20px;'></tr>
-//     <%  }   %>
-//     </table> 
-// </div>

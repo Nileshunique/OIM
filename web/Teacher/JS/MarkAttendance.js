@@ -1,4 +1,4 @@
-${document}.ready(function(){
+$(document).ready(function(){
     var date = new Date();
     var H = date.getDay();
     var M = date.getMinutes();

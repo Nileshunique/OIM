@@ -27,6 +27,7 @@
                 <div id="Content">
                     <div id="show_Detail">
                     <% 
+                        String update=request.getParameter("update");
                         String StdId=request.getParameter("StdId");
                         String sname=request.getParameter("sname");
                         String fname=request.getParameter("fname");
@@ -47,12 +48,22 @@
                             String sql = "";
                             Class.forName("com.mysql.jdbc.Driver");
                             Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
-                            sql="insert into student values('"+StdId+"', '"+sname+"', '"+fname+"','"+DOB+"', '"+gender+"', '"+mob+"', '"+email+"', '"+Add_date+"', '"+Add+"', '"+Dist+"', '"+State+"', "+Pincode+", '"+country+"', '"+course+"', "+Fee+")";
+                            if(update.equals("update")){
+                                sql="UPDATE student SET `StudentName` = '"+sname+"', `FatherName` = '"+fname+"', `DOB` = '"+DOB+"', `Gender` = '"+gender+"', `MobileNo` = '"+mob+"', `EmailID` = '"+email+"', `DateOfAdmission` = '"+Add_date+"', `Adress` = '"+Add+"', `District` = '"+Dist+"', `states` = '"+State+"', `Pincode` = "+Pincode+", `Country` = '"+country+"', `Course_Id` = '"+course+"', `Fee` = "+Fee+" WHERE `STD_Id` = '"+StdId+"';";
+                            }
+                            else{
+                                sql="insert into student values('"+StdId+"', '"+sname+"', '"+fname+"','"+DOB+"', '"+gender+"', '"+mob+"', '"+email+"', '"+Add_date+"', '"+Add+"', '"+Dist+"', '"+State+"', "+Pincode+", '"+country+"', '"+course+"', "+Fee+")";
+                            }
                             Statement stmt=myCon.createStatement();
                             int dataStored = stmt.executeUpdate(sql);
                             if(dataStored == 1){
-                                out.print("<center><h2>Your Registration Id is <i>"+StdId+"</i></h2><br>");
-                                out.print("<h3 style='margin-bottom:20px;'>Keep it for future Reference.</h3></center>");
+                                if(update.equals("update")){
+                                    out.print("<center><h2>Your Detail is Updated in Database.</h2><br>");
+                                }
+                                else{
+                                    out.print("<center><h2>Your Registration Id is <i>"+StdId+"</i></h2><br>");
+                                    out.print("<h3 style='margin-bottom:20px;'>Keep it for future Reference.</h3></center>");
+                                }
                             }
                         }
                         catch(Exception e){out.print("Please contact to Your IT Head <br>"+e+"<br><div style='margin-bottom:20px;width:100px;height:390px;'></div>");}

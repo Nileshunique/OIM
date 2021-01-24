@@ -37,8 +37,8 @@
                         var StudentList = {<% int i=0; while(res.next()){ out.print(i+":['"+res.getString(1) + "','" +res.getString(2) + "','" +res.getString(3)+"','" +res.getString(4)+"'," +res.getInt(5)+"],"); i++;} out.print(i+":"+i); %>};
                     </script>
                     <% }
-                catch(Exception e){out.print(e);}%>
-                Enter Student name : <input type="text" id="SearchStd" style="width:200px;height:25px;">
+                    catch(Exception e){out.print(e);}%>
+                    <span style="padding-top:20px;display:block;"><center>Enter Student name : <input type="text" id="SearchStd" style="width:200px;height:25px;"></center></span>
                     <div id="show_Detail"></div>
                 </div>
              </div>
