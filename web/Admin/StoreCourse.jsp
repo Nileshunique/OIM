@@ -27,6 +27,7 @@
                 <div id="Content">
                     <div id="show_Detail">
                         <%
+                            String update = request.getParameter("update");
                             String cid = request.getParameter("cid");
                             String cname = request.getParameter("cname");
                             String cdur = request.getParameter("cdur");
@@ -37,10 +38,21 @@
                                 Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
                                 if(cfee!=null){
                                     int fee=Integer.parseInt(cfee);
-                                    String sql=" INSERT INTO course (`Course_Id`, `CourseName`, `Duration`, `Fee`) VALUES ('"+cid+"', '"+cname+"', '"+cdur+"', "+fee+");";
+                                    if(update.equals("update")){
+                                        String sql="UPDATE course SET `Duration` = '"+cdur+"', `Fee` = "+cfee+" WHERE `Course_Id` = '"+cid+"'";
+                                    }
+                                    else{
+                                        String sql=" INSERT INTO course (`Course_Id`, `CourseName`, `Duration`, `Fee`) VALUES ('"+cid+"', '"+cname+"', '"+cdur+"', "+fee+");";
+                                    }
                                     Statement stmt=myCon.createStatement();
                                     stmt.executeUpdate(sql);
-                                    out.print("<h1>Course is Updated into Database <a href='Dashboard.jsp'> Go to Dashboard</a></h1>");
+                                    if(update.equals("update")){
+                                        out.print("<h1>Course is Updated into Database.</h1>");
+                                    }
+                                    else{
+                                        out.print("<h1>Course is Stored into Database</h1>");
+                                    }
+                                    out.print("<h1><a href='ViewCourseList.jsp'> Click Here to See </a></h1>");
                                 }
                                 
                             }

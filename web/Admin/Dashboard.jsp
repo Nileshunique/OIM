@@ -49,15 +49,14 @@
                         <p>Course  </p>
                         <div class="Course_module">
                             <a href="AddNewCourse.jsp">Add New Course</a> 
-                            <a href="">Edit Course Detail</a> 
+                            <a href="EditCourseList.jsp">Edit Course Detail</a> 
                             <a href="ViewCourseList.jsp">View All Courses</a>
                         </div>
                     </div>
                     <div href="" class="module_Items">
                         <p>Batch  </p>
                         <div class="Batch_module">
-                            <a href="CreateBatch.jsp">Create Batch</a> 
-                            <a href="">Edit Batch</a> 
+                            <a href="CreateBatch.jsp">Create Batch</a>
                             <a href="ViewRunningBatch.jsp">View Runing Batches</a>
                         </div>
                     </div>
