@@ -33,7 +33,7 @@
                             <a href="AddNewStaff.jsp">Appoint New Staff / Teacher</a> 
                             <a href="EditStaffList.jsp">Edit Staff / Teacher Detail</a> 
                             <a href="ViewStaffList.jsp">View Staff / Teacher List</a> 
-                            <a href="">Create Username & Password for Staff / Teacher</a>
+                            <a href="StaffsUserNameCreate.jsp">Create Username & Password for Staff / Teacher</a>
                         </div>
                     </div>
                     <div href="" class="module_Items">
@@ -42,7 +42,7 @@
                             <a href="StudentRegistration.jsp">Student Registration</a> 
                             <a href="EditStudentList.jsp">Edit Student Detail</a> 
                             <a href="ViewStudentList.jsp">View Student List</a> 
-                            <a href="">Create Username & Password for Student</a>
+                            <a href="StudentsUserNameCreate.jsp">Create Username & Password for Student</a>
                         </div>
                     </div>
                     <div href="" class="module_Items">
@@ -70,7 +70,7 @@
                     <div href="" class="module_Items Attendance">
                         <p>Attendance  </p>
                         <div class="Attendance_module">
-                            <a href="">View Student Attendance</a>
+                            <a href="ViewAttendance.jsp">View Student Attendance</a>
                         </div>
                     </div>
                 </div>

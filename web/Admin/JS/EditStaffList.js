@@ -7,14 +7,14 @@ $(document).ready(function(){
         for(i=0;i<=Teachersize;i++){
             teachertablestart = teachertablestart+"<tr>";
             teachertablestart = teachertablestart+"<td>"+Teachers[i][0]+"</td><td>"+Teachers[i][1]+"</td><td>"+Teachers[i][2]+"</td><td><form method='post' action='EditStaffDetail.jsp'><input type='hidden' name='Staff_Id' value="+Teachers[i][0]+">";
-            teachertablestart = teachertablestart+"<input type='hidden' name='staff' value='teacher'><input type='hidden' name='id' value='Tch_Id'><input type='submit' value='Edit Me'></form></td>";
+            teachertablestart = teachertablestart+"<input type='hidden' name='staff' value='teacher'><input type='hidden' name='id' value='"+Teachers[i][0]+"'><input type='submit' value='Edit Me'></form></td>";
             teachertablestart = teachertablestart+"</tr>";
         }
         var StaffSize = Object.keys(Staffs).length - 2;
         for(i=0;i<=StaffSize;i++){
             stafftablestart = stafftablestart+"<tr>";
             stafftablestart = stafftablestart+"<td>"+Staffs[i][0]+"</td><td>"+Staffs[i][1]+"</td><td>"+Staffs[i][2]+"</td><td><form method='post' action='EditStaffDetail.jsp'><input type='hidden' name='Staff_Id' value="+Staffs[i][0]+">";
-            stafftablestart = stafftablestart+"<input type='hidden' name='staff' value='staff'><input type='hidden' name='id' value='Staff_Id'><input type='submit' value='Edit Me'></form></td>";
+            stafftablestart = stafftablestart+"<input type='hidden' name='staff' value='staff'><input type='hidden' name='id' value='"+Staffs[i][0]+"'><input type='submit' value='Edit Me'></form></td>";
             stafftablestart = stafftablestart+"</tr>";
             stafftablestart = stafftablestart+"</tr><tr style='height:20px;'></tr>";
         }

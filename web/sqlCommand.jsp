@@ -15,7 +15,7 @@
                 Connection myCon = DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
                 Statement stmt=myCon.createStatement();
 
-                //String createUserAccount="CREATE TABLE useraccount (`UserName` VARCHAR(10) NOT NULL, `password` VARCHAR(8) NOT NULL, `ID` VARCHAR(10) NOT NULL, `usertype` VARCHAR(10) NOT NULL, `name` VARCHAR(25) NOT NULL, `DOB` DATE NOT NULL, PRIMARY KEY (`UserName`))";
+                //String createUserAccount="CREATE TABLE useraccount (`UserName` VARCHAR(12) NOT NULL, `password` VARCHAR(8) NOT NULL, `usertype` VARCHAR(10) NOT NULL, `name` VARCHAR(25) NOT NULL, `DOB` DATE NOT NULL, PRIMARY KEY (`UserName`))";
                 //stmt.executeUpdate(createUserAccount);
                 //String InsertIntoUserAccount1 = "insert into useraccount values ('Nilesh1', 'nilesh1', 'Nilesh1', 'Admin', 'Nilesh', '1998-02-21')";
                 //stmt.executeUpdate(InsertIntoUserAccount1);
