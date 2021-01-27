@@ -54,6 +54,8 @@
                 //String CreateFeeReceipt = "create table FeeReceipt(`Receipt_Id` varchar(12) not null,`STD_Id` varchar(12) not null,`PaidAmount` int UNSIGNED not null,`Date` date not null, `Staff_Id` varchar(12) not null, foreign key(`STD_Id`) references student(`STD_Id`), foreign key(`Staff_Id`) references staff(`Staff_Id`),PRIMARY KEY (`Receipt_Id`));";
                 //stmt.executeUpdate(CreateFeeReceipt);
                 
+                //String CreateAttendance = create table attendance(STD_Id varchar(12), Tch_Id varchar(12), `Date` date not null, Status varchar(10) not null, Course_Id varchar(12) not null, foreign key(`STD_Id`) references student(`STD_Id`), foreign key(`Tch_Id`) references teacher(`Tch_Id`),foreign key(`Course_Id`) references course(`Course_Id`));";
+                //stmt.executeUpdate(CreateAttendance);
 
                 out.print("Data Inserted");
 

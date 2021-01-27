@@ -32,9 +32,11 @@ $(document).ready(function(){
                 if(Batch[i][2] == Day || Batch[i][3] == Day || Batch[i][4] == Day){
                     for(k=0;k<=StudentLength;k++){
                         if(Student[k][3] == CourseSelected){
-                            TotalStudent++;
                             console.log(CourseSelected);
-                            StudentList += "<tr><th>"+Student[k][0]+"</th><th>"+Student[k][1]+"</th><th>"+Student[k][2]+"</th><th><input type='text' name='status"+TotalStudent+"' value='p' style='width:50px;'><input type='hidden' name='std"+TotalStudent+"' value='"+Student[k][0]+"' ></th></tr>";
+                            StudentList += "<tr><th>"+Student[k][0]+"</th><th>"+Student[k][1]+"</th><th>"+Student[k][2]+"</th><th><input type='text' name=status"+TotalStudent+" value='p' style='width:50px;'><input type='hidden' name=std"+TotalStudent+" value='"+Student[k][0]+"' ></th></tr>";
+                            TotalStudent++;
+                            console.log("status"+TotalStudent+"");
+                            console.log("std"+TotalStudent+"");
                         }
                     }
                 }

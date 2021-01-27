@@ -19,13 +19,10 @@
                 ResultSet res=stmt.executeQuery(sql);
                 if(res.next())
                 {
-                    session.setAttribute("user", user);
-                    session.setAttribute("pass", pass);
                     session.setAttribute("usertype", usertype);
-                    session.setAttribute("Id",res.getString(3));
+                    session.setAttribute("Id",res.getString(1));
                     session.setAttribute("name", res.getString(4));
                     if(usertype.equals("Admin")){
-                        out.print(usertype);
                         response.sendRedirect("Admin/Dashboard.jsp");
                     }
                     else if(usertype.equals("Teacher")){

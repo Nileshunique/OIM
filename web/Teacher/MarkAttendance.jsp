@@ -43,13 +43,13 @@
                         <form method="post" action="StoreAttend.jsp">
                         <fieldset>
                             <legend>Mark Students Attendance</legend>
+                            <input type="hidden" id="TotalStudent" name="TotalStudent">
+                            <input type="hidden" id="todaydate" name="date">
                             <table>
                                 <tr><td></td><td></td><td>Select Course</td><td><select name="Course" id="CourseList"></select></td></tr>
                                 <tr><td colspan="4" id="Studentlist"></td></tr>
                                 <tr><td></td><td></td><td></td><td><input type="submit" value="Submit"></td></tr>
                             </table>
-                            <input type="hidden" id="TotalStudent" name="TotalStudent">
-                            <input type="hidden" id="todaydate" name="date">
                         </fieldset>
                         </form>
                     </div>
