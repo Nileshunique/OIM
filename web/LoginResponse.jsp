@@ -23,7 +23,7 @@
                     session.setAttribute("pass", pass);
                     session.setAttribute("usertype", usertype);
                     session.setAttribute("Id",res.getString(3));
-                    session.setAttribute("name", res.getString(5));
+                    session.setAttribute("name", res.getString(4));
                     if(usertype.equals("Admin")){
                         out.print(usertype);
                         response.sendRedirect("Admin/Dashboard.jsp");

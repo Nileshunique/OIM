@@ -3,20 +3,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>OIM | Admin | DashBoard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/DashBoard.css">
     </head>
     <body>
-        <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");
-            if((session.getAttribute("name")==null) && (session.getAttribute("usertype")!="Admin"))
-            {
-                response.sendRedirect("../Login.jsp");
-            } 
-        %>
-
+        <jsp:include page="VerifyAdmin.jsp"></jsp:include>
         <div class="Outer">
             <div class="Header">
                 <div class="HeaderContent InstituteLogo"><img src="http://localhost:8080/OIM/Image/InstituteLogo.jpg" alt="Logo" width="100px" Height="70px"></div>

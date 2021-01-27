@@ -3,20 +3,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>OIM | Teacher | DashBoard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/DashBoard.css">
     </head>
     <body>
-        <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");
-            if((session.getAttribute("name")==null) && (session.getAttribute("usertype")!="Teacher"))
-            {
-                response.sendRedirect("../Login.jsp");
-            } 
-        %>
-
+        <jsp:include page="VerifyTeacher.jsp"></jsp:include>
         <div class="Outer">
             <div class="Header">
                 <div class="HeaderContent InstituteLogo"><img src="http://localhost:8080/OIM/Image/InstituteLogo.jpg" alt="Logo" width="100px" Height="70px"></div>
@@ -27,41 +21,41 @@
             </div>
             <div class="Container">
                 <div id="Content">
-                    <div class="module_Items">
-                        <p>Staff / Teacher Management</p>
+                    <div href="" class="module_Items">
+                        <p>Staff / Teacher</p>
                         <div class="Staff_module">
                             <a href="ViewStaffList.jsp">View Staff / Teacher List</a> 
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Student  Management</p>
+                        <p>Student</p>
                         <div class="Student_module">
-                            <a href="">View Student List</a> 
+                            <a href="ViewStudentList.jsp">View Student List</a> 
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Course  Management</p>
+                        <p>Course</p>
                         <div class="Course_module">
-                            <a href="">View All Courses</a>
+                            <a href="ViewCourseList.jsp">View All Courses</a>
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Batch  Management</p>
+                        <p>Batch</p>
                         <div class="Batch_module">
                             <a href="ViewRunningBatch.jsp">View Runing Batches</a>
                         </div>
                     </div>
                     <div href="" class="module_Items">
-                        <p>Fees  Management</p>
+                        <p>Fees</p>
                         <div class="Fee_module">
                             <a href="ViewPendingFee.jsp">View Pending Fee List</a>
                         </div>
                     </div>
-                    <div href="" class="module_Items">
-                        <p>Attendance  Management</p>
+                    <div href="" class="module_Items Attendance">
+                        <p>Attendance</p>
                         <div class="Attendance_module">
                             <a href="MarkAttendance.jsp">Mark Student Attendance</a>
-                            <a href="">View Student Attendance</a>
+                            <a href="ViewAttendance.jsp">View Student Attendance</a>
                         </div>
                     </div>
                 </div>

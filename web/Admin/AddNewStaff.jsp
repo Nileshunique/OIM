@@ -4,22 +4,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>OIM Teacher Registration</title>
+        <title>OIM | Admin | Add New Staff</title>
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/AddNewStaff.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="../JavaScript/jquery-3.5.1.min.js"></script>
         
     </head>
     <body>
-        <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");%>
-        <% 
-            if((session.getAttribute("name")==null) && (session.getAttribute("usertype")!="Admin"))
-            {
-                response.sendRedirect("../Login.jsp");
-            } 
-            
-        %>
-
+        <jsp:include page="VerifyAdmin.jsp"></jsp:include>
         <div class="Outer">
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">
@@ -54,14 +46,14 @@
                                 </tr>
                                 <tr>
                                     <td>Email ID</td>
-                                    <td><input type="email" name="email"  style="width:200px;height:20px;" placeholder="Enter Email Id"</td>
+                                    <td><input type="email" name="email"  style="width:200px;height:20px;" placeholder="Enter Email Id"></td>
                                 
                                     <td>Mobile Number</td>
                                     <td><input type="tel" name="mob" placeholder="enter 10 no only"  style="width:200px;height:20px;"></td>
                                 </tr>
                                 <tr>
                                     <td>Date Of Joining</td>
-                                    <td><input type="date" name="Join_date" style="width:200px;height:20px;" min="2021-01-01"></td>
+                                    <td><input type="date" name="Join_date" style="width:200px;height:20px;" min="2021-01-01" max="2021-04-30"></td>
                                 
                                     <td>Address</td>
                                     <td><input type="text" name="Add" placeholder="Addres"  style="width:200px;height:20px;"></td>

@@ -3,24 +3,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>OIM Student Registration</title>
+        <title>OIM | Admin | Create Batch</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/CreateBatch.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="../JavaScript/jquery-3.5.1.min.js"></script>
     </head>
     <body>
-    <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");
-        %>
-        <% 
-            if((session.getAttribute("name")==null) && (session.getAttribute("usertype")!="Admin"))
-            {
-                response.sendRedirect("../Login.jsp");
-            } 
-            
-        %>
-
+        <jsp:include page="VerifyAdmin.jsp"></jsp:include>
         <div class="Outer">
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">
@@ -59,7 +50,7 @@
                                         <select name="BatchName" id="BatchName" style="width:230px;height:25px;">
                                             <option></option>
                                             <option value="Batch001">Monday, Wednesday, Friday</option>
-                                            <option value="Batch001">Tuesday, Thrusday, Friday</option>
+                                            <option value="Batch002">Tuesday, Thrusday, Saturday</option>
                                         </select></td></tr>
                                     <tr><td>Select Time Slot</td><td>
                                         <select name="TimeSlot" id="TimeSlot" style="width:230px;height:25px;">

@@ -7,22 +7,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>OIM Teacher Registration</title>
+        <title>OIM | Admin | Accept Student Fees</title>
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/PayFee.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="../JavaScript/jquery-3.5.1.min.js"></script>
         
     </head>
     <body>
-        <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");%>
-        <% 
-            if((session.getAttribute("name")==null) && (session.getAttribute("usertype")!="Admin"))
-            {
-                response.sendRedirect("../Login.jsp");
-            } 
-            
-        %>
-
+        <jsp:include page="VerifyAdmin.jsp"></jsp:include>
         <div class="Outer">
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">

@@ -3,24 +3,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>OIM Student Registration</title>
+        <title>OIM | Admin | Student Registration</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/AddNewStaff.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="../JavaScript/jquery-3.5.1.min.js"></script>
     </head>
     <body>
-    <% response.setHeader("Cache-Control","no-cache,no-store, must-revalidate");
-        %>
-        <% 
-            if((session.getAttribute("name")==null) && (session.getAttribute("usertype")!="Admin"))
-            {
-                response.sendRedirect("../Login.jsp");
-            } 
-            
-        %>
-
+        <jsp:include page="VerifyAdmin.jsp"></jsp:include>
         <div class="Outer">
             <jsp:include page="Header.jsp"></jsp:include>
             <div class="Container">
@@ -39,8 +30,7 @@
                         </tr>
                         <tr>
                             <td>Date Of Birth</td>
-                            <td><%--<jsp:include page="../Date.html"></jsp:include>--%>
-                        <input type="date" name="dob"  style="width:200px;height:20px;"></td>
+                            <td><input type="date" name="dob"  style="width:200px;height:20px;" min="1980-01-01" max="2005-12-31"></td>
 
                             <td>Gender</td>
                             <td><select  style="width:205px;height:25px;" name="gender">
@@ -54,12 +44,12 @@
                             <td><input type="tel" name="mob" placeholder="enter 10 no only"  style="width:200px;height:20px;"></td>
 
                             <td>Email ID</td>
-                            <td><input type="email" name="email"  style="width:200px;height:20px;" placeholder="Enter Email Id"</td>
+                            <td><input type="email" name="email"  style="width:200px;height:20px;" placeholder="Enter Email Id"></td>
                         </tr>
                         <tr>
                             <td>Date Of Admission</td>
                             <td>
-                                <input type="date" name="Add_date" style="width:200px;height:20px;"></td>
+                                <input type="date" name="Add_date" style="width:200px;height:20px;" min="2021-01-01" max="2021-04-30"></td>
 
                             <% 
                             try
