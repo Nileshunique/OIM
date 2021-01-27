@@ -33,7 +33,7 @@ $(document).ready(function(){
                     for(k=0;k<=StudentLength;k++){
                         if(Student[k][3] == CourseSelected){
                             console.log(CourseSelected);
-                            StudentList += "<tr><th>"+Student[k][0]+"</th><th>"+Student[k][1]+"</th><th>"+Student[k][2]+"</th><th><input type='text' name=status"+TotalStudent+" value='p' style='width:50px;'><input type='hidden' name=std"+TotalStudent+" value='"+Student[k][0]+"' ></th></tr>";
+                            StudentList += "<tr><th>"+Student[k][0]+"</th><th>"+Student[k][1]+"</th><th>"+Student[k][2]+"</th><th><select type='text' name=status"+TotalStudent+" style='width:100px;'><option value='Present'>Present</option><option value='Absent'>Absent</option><option value='Leave'>Leave</option><select><input type='hidden' name=std"+TotalStudent+" value='"+Student[k][0]+"' ></th></tr>";
                             TotalStudent++;
                             console.log("status"+TotalStudent+"");
                             console.log("std"+TotalStudent+"");

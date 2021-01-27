@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var StudentTableStart = "<h1>List Of Student</h1><table>";
+    var StudentTableStart = "<h1>My Profile</h1><table>";
     var StudentTableEnd = "</table>";
     var CourseSize = Object.keys(Course).length - 2;
     var TStudentsize = Object.keys(Student).length - 2;

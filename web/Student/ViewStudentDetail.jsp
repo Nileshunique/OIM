@@ -17,12 +17,13 @@
             <div class="Container">
                 <div id="Content">
                     <% 
+                        String stdid = (String)session.getAttribute("Id");
                         try{ 
                         Class.forName("com.mysql.jdbc.Driver");
                         Connection myCon =DriverManager.getConnection("jdbc:mysql://localhost:3306/oim?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false","root","root");
                         Statement StmtS=myCon.createStatement();
                         Statement StmtC=myCon.createStatement();
-                        ResultSet resS = StmtS.executeQuery("select * from student"); 
+                        ResultSet resS = StmtS.executeQuery("select * from student where STD_Id ='"+stdid+"'"); 
                         ResultSet resC = StmtC.executeQuery("select Course_Id, CourseName from course"); 
                     %>
                         <script type="text/javascript">
@@ -41,7 +42,7 @@
                 </div>
             </div>
             <div class="Footer">Project Created by Nilesh Kumar & Nitin</div>
-            <script src="JS/ViewStudentList.js"></script>
+            <script src="JS/ViewStudentDetail.js"></script>
         </div>
     </body>
 </html>
